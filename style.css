@@ -49,6 +49,10 @@ body {
     transition: .3s;
 }
 
+.navbar a:hover ,.navbar .active {
+    color: #0ef;
+}
+
 section {
     min-height: 100vh;
     padding: 10rem 9% 2rem;
@@ -71,9 +75,27 @@ section {
     font-size: 1.5rem;
 }
 .home-content h2 {
-    font-size: 2.8rem;
+    font-size: 1.8rem;
 }
+
+.home-content h2 span{
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .7px #0ef;
+    animation: display-text 16s linear infinite;
+    animation-delay:calc(-4s * var(--i)) ;
+}
+
+
+@keyframes display-text {
+    25%,
+    100% {
+        display: none;
+    }
+}
+
 .home-content p {
+    margin-top: 25px; 
     font-size: 1.5rem;
 }
 
@@ -140,7 +162,7 @@ section {
     background: transparent;
     border: 2px solid #0ef;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 16px;
     color: #0ef;
     z-index: 1;
     overflow: hidden;
@@ -163,4 +185,11 @@ section {
     background: #0ef;
     z-index: -1;
 } 
-    
+
+.img {
+    position: absolute;
+    object-fit: cover;
+    top:0;
+    right: 0;
+}
+
